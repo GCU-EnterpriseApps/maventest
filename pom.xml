@@ -21,6 +21,23 @@
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
+  <scm>
+    <connection>scm:git:https://github.com/GCU-EnterpriseApps/maventest.git</connection>
+  </scm>
+
+  <distributionManagement>
+    <snapshotRepository>
+      <id>snapshots</id>
+      <name>artifactory.gcu.edu-snapshots</name>
+      <url>https://artifactory.gcu.edu/artifactory/thesis-local-snapshots</url>
+    </snapshotRepository>
+    <repository>
+      <id>central</id>
+      <name>artifactory.gcu.edu-releases</name>
+      <url>https://artifactory.gcu.edu/artifactory/thesis-local-releases</url>
+    </repository>
+  </distributionManagement>
+
   <dependencies>
     <dependency>
       <groupId>org.springframework.boot</groupId>
