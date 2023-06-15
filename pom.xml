@@ -3,7 +3,7 @@
 
   <groupId>org.example</groupId>
   <artifactId>maventest</artifactId>
-  <version>1.221.5</version>
+  <version>1.221.6-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>maventest</name>
@@ -22,7 +22,7 @@
 
   <scm>
     <connection>scm:git:https://github.com/GCU-EnterpriseApps/maventest.git</connection>
-    <tag>maventest-1.221.5</tag>
+    <tag>maventest-1.221.3</tag>
   </scm>
 
   <distributionManagement>
