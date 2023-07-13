@@ -21,7 +21,9 @@
   </properties>
 
   <scm>
-    <connection>scm:git:https://github.com/GCU-EnterpriseApps/maventest.git</connection>
+    <!--<connection>scm:git:https://github.com/GCU-EnterpriseApps/maventest.git</connection>-->
+    <!--<connection>scm:git:https://github.com/GCU-EnterpriseApps/maventest.git</connection>-->
+    <url>https://github.com/GCU-EnterpriseApps/maventest/blob/buildNumberCheck</url>
     <tag>maventest-1.221.3</tag>
   </scm>
 
@@ -88,7 +90,28 @@
           <developmentVersion>1.${parsedVersion.nextMinorVersion}.${parsedVersion.nextMajorVersion}-SNAPSHOT</developmentVersion>
         </configuration>
       </plugin>-->
-
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>buildnumber-maven-plugin</artifactId>
+        <version>3.1.0</version>
+        <executions>
+          <execution>
+            <id>generate-build-number</id>
+            <phase>install</phase>
+            <goals>
+              <goal>create</goal>
+            </goals>
+          </execution>
+        </executions>
+        <configuration>
+          <format>{0,number}</format>
+          <items>
+            <item>buildNumber</item>
+          </items>
+          <doCheck>true</doCheck>
+          <doUpdate>true</doUpdate>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
